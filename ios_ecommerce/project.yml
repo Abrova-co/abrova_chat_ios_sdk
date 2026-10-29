@@ -1,0 +1,32 @@
+name: AbrovaChatEcommerce
+options:
+  bundleIdPrefix: ir.abrova.chat.example
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "15.0"
+
+packages:
+  AbrovaChat:
+    path: ../../sdk/ios/AbrovaChat
+  AbrovaChatUI:
+    path: ../../sdk/ios/AbrovaChatUI
+
+targets:
+  AbrovaChatEcommerce:
+    type: application
+    platform: iOS
+    sources:
+      - AbrovaChatEcommerce
+    dependencies:
+      - package: AbrovaChat
+      - package: AbrovaChatUI
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: ir.abrova.chat.ecommerce
+      INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
+      INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents: YES
+      INFOPLIST_KEY_UILaunchScreen_Generation: YES
+      INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+      INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+      SWIFT_VERSION: "5.9"
+      GENERATE_INFOPLIST_FILE: YES
+      DEVELOPMENT_TEAM: ""
