@@ -56,9 +56,14 @@ Then add the libraries to your target:
 Add to your `Podfile`:
 
 ```ruby
-pod 'AbrovaChat', :git => 'https://center.abrova.ir/abrova/abrova-chat-ios-sdk.git', :tag => '0.2.0'
-pod 'AbrovaChatUI', :git => 'https://center.abrova.ir/abrova/abrova-chat-ios-sdk.git', :tag => '0.2.0'
+source 'https://center.abrova.ir/abrova/specs.git'
+source 'https://cdn.cocoapods.org/'
+
+pod 'AbrovaChat', '~> 0.2'
+pod 'AbrovaChatUI', '~> 0.2'
 ```
+
+The two `source` lines go at the top of the `Podfile`: the first finds the Abrova pods on Abrova Center, the second keeps public pods working.
 
 Then run:
 
